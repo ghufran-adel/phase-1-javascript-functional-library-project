@@ -81,22 +81,4 @@ const data = function(collection) {
     return (start) ? arr.slice(arr.length-start, arr.length) : arr[arr.length-1];
   }
   
-  const mySortBy = function(arr, callback) {
-    const newArr = [...arr];
-    return newArr.sort(function(a, b) {
-      if (callback(a) > callback(b)) {
-        return 1;
-      } else if (callback(b) > callback(a)) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
-  }
-  const unpack = function(receiver, arr) {
-    for (let val of arr) {
-      receiver.push(val);
-    }
-  }
   
- 
